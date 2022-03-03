@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,200;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <h1>Tip Calculator</h1>
+        <div class="container">
+            <label>Bill ₹</label>
+            <input type="text" placeholder="Amount to be paid" id="bill_amount" style="width:473px">
+            <br>
+            <label>Tip %</label>
+
+            <div class="input-field">
+                <i class="fa fa-plus" aria-hidden="true" onclick="addValue(tip_perc)"></i>
+                <input type="text" placeholder="Tip Percentage" id="tip_perc" name="Tip Percentage" required
+                    onfocusout="validate(tip_perc)"
+                    onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+                <i class="fa fa-minus" aria-hidden="true" onclick="minusValue(tip_perc)"></i>
+            </div>
+
+            <br>
+            <label>Number of People </label>
+            <div class="input-field">
+                <i class="fa fa-plus" aria-hidden="true" onclick="addValue(Num_of_people)"></i>
+                <input type="text" placeholder="Number of People" id="Num_of_people" name="Number of People" required
+                    onfocusout="validate(Num_of_people)"
+                    onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+                <i class="fa fa-minus" aria-hidden="true" onclick="minusValue(Num_of_people)"></i>
+            </div>
+            <br>
+
+            <button onclick="tipcalcy()" id="calculate">Calculate</button>
+            <label>Tip per Person</label>
+            <input type="text" name="" id="tip_total" disabled>
+            <br>
+            <label>Total per Person</label>
+            <input type="text" name="" id="total_billed" disabled>
+            <br>
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>
